@@ -6,3 +6,23 @@
 .NavBarColor {
     background-color: rgb(20, 20, 20);
 }
+
+.Option {
+    color: rgb(182, 182, 182);
+    text-decoration: none;
+    padding-left: 30px;
+    font-weight: 600;
+}
+.Option:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding-left: 30px;
+    font-weight: 600;
+}
+.ActiveOption {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding-left: 30px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}

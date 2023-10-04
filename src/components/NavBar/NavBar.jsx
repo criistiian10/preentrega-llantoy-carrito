@@ -13,14 +13,14 @@ function NavBar() {
   return (
     <Navbar expand="lg" className="NavBarColor" data-bs-theme="dark">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href='/'>
             <CartWidget/> 
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <NavLink to={`/category/sports`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Shooters</NavLink>
-            <NavLink to={`/category/shooter`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Sports</NavLink>
+            <NavLink to={`/category/sports`} className= {({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Deportes</NavLink>
+            <NavLink to={`/category/shooter`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Shooters</NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

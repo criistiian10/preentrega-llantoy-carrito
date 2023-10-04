@@ -4,7 +4,9 @@ import './Item.css'
 
 const Item = ({id, name, img, price, stock}) => {
   return (
+    
     <article className='CardItem'>
+        
         <header className='Header'>
             <h2 className='ItemHeader'>
                 {name}
@@ -14,20 +16,24 @@ const Item = ({id, name, img, price, stock}) => {
             <img src={img} alt={name} className='ItemImg'/>
         </picture>
         <section>
+            <br />
             <p className='Info'>
                 Precio: ${price}
             </p>
             <p className='Info'>
                 Stock disponible: {stock}
             </p>
+            <p>
+                Codigo de Juego: {id}
+            </p>
+            <br />
         </section>
         <footer className='ItemFooter'>
             <link to={`/item/${id}`} className='Option'></link>
         </footer>
         <br/>
-        <br/>
-        <br/>
-        <br/>
+        
+        
     </article>
   )
 }
