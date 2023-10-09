@@ -22,3 +22,9 @@ article {
     text-align: center;
 
 }
+
+.ItemFooter {
+    border: 1px double rgb(255, 255, 255);
+    width: 80%;
+    margin: auto;
+}

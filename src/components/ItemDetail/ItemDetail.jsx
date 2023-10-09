@@ -1,6 +1,6 @@
-import React from 'react'
-import './ItemDetail.css'
-
+import React from 'react';
+import './ItemDetail.css';
+import ItemCount from '../ItemCount/ItemCount';
 
 const ItemDetail = ({ id, name, img, category, description, price, stock}) => {
   return (
@@ -25,10 +25,11 @@ const ItemDetail = ({ id, name, img, category, description, price, stock}) => {
             </p>
         </section>
         <footer className='ItemFooter'>
-            ItemCount initial={1} stock={stock} onAdd={(quantity) => console.log('Cantidad agregada')}
+            <ItemCount initial={1} stock={stock} onAdd={(quantity) => console.log('Cantidad agregada')} />
         </footer>
+        <br />
     </article>
   )
 }
 
-export default ItemDetail
+export default ItemDetail;
