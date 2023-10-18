@@ -1,0 +1,40 @@
+.ItemDetailContainer .CardItem {
+    margin: auto;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    box-shadow: 0 3px 13px 1px rgb(0, 0, 0);
+}
+.ItemDetailContainer .CardItem .ItemImg {
+    width: 70%;
+}
+.ItemDetailContainer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.ItemDetailContainer .CardItem{
+    padding-top: 20px;
+    width: 50%;
+    border-radius: 40px;
+}
+.ItemDetailContainer .CardItem section {
+    padding-top: 20px;
+    width: 70%;
+    margin: auto;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.ItemDetailContainer .CardItem .ItemFooter .Counter .Button {
+    margin: auto;
+    color: white;
+    width: 12%;
+    background-color: rgb(20, 20, 20);
+    border: 1px double rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+}
+.ItemDetailContainer .CardItem .ItemFooter .Counter .Button:hover {
+    margin: auto;
+    color: rgb(0, 0, 0);
+    width: 12%;
+    background-color: rgb(255, 255, 255);
+    border: 1px double rgb(0, 0, 0);
+}

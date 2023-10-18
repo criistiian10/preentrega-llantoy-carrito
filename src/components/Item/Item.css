@@ -4,9 +4,9 @@ img {
     
 }
 
-.ListGroup {
+/* .ListGroup {
     
-}
+} */
 
 .ListGroup article {
     width: 30%;
@@ -16,6 +16,18 @@ img {
     color: white;
     font-family: 'Times New Roman', Times, serif;
     border-radius: 40px;
+    box-shadow: 0 3px 13px 1px rgb(0, 0, 0);
+    
+}
+
+.ListGroup .ItemFooter .Option {
+    color: rgb(173, 173, 173);
+    text-decoration: none;
+}
+
+.ListGroup .ItemFooter .Option:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 article {
@@ -23,8 +35,9 @@ article {
 
 }
 
-.ItemFooter {
+.ListGroup .ItemFooter {
     border: 1px double rgb(255, 255, 255);
-    width: 80%;
+    width: 40%;
     margin: auto;
+    
 }
