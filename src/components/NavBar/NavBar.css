@@ -1,7 +1,14 @@
-.mi-icono-personalizado {
+.CartImg {
     font-size: 24px;
     margin-right: 20px;
     margin-left: 20px;
+    color: rgb(182, 182, 182);
+}
+.CartImg:hover {
+    font-size: 24px;
+    margin-right: 20px;
+    margin-left: 20px;
+    color: rgb(255, 255, 255);
 }
 .NavBarColor {
     background-color: rgb(20, 20, 20);

@@ -1,0 +1,33 @@
+.App .boleta2 .totalLimpiar {
+    background-color: rgb(20, 20, 20);
+    padding: 10px;
+    display: flex;
+    margin-top: 30px;
+}
+.App .boleta2 h3 {
+    color: white;
+    padding: 15px;
+    margin-left: 10%;
+}
+.App .boleta2 .Button1 {
+    background-color: rgb(190, 0, 0);
+    box-shadow: 0 3px 13px 1px rgb(87, 87, 87);
+    border: 1px solid rgb(44, 44, 44);
+    border-radius: 15px;
+    padding: 15px;
+    color: rgb(175, 175, 175);
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: 10%;
+}
+.App .boleta2 .Button1:hover {
+    background-color: rgb(255, 0, 0);
+    box-shadow: 0 3px 13px 1px rgb(110, 110, 110);
+    border: 1px solid rgb(44, 44, 44);
+    border-radius: 15px;
+    padding: 15px;
+    color: rgb(228, 226, 226);
+    
+    margin-left: auto;
+    margin-right: 10%;
+}

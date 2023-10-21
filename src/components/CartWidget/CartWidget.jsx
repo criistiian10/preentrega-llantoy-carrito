@@ -1,13 +1,18 @@
 import React from 'react'
 import '../NavBar/NavBar.css'
 import { FaShoppingCart } from "react-icons/fa";
+import { useContext } from 'react'
+import { CartContext } from '../../context/CartContext'
+import { Link } from 'react-router-dom'
 
 const CartWidget = () => {
+  const { totalQuantity } = useContext(CartContext)
+
   return (
-    <div>
-      <FaShoppingCart className="mi-icono-personalizado"/>
-      0
-    </div>
+    <Link to='/cart' className={`CartWidget ${totalQuantity === 0 ? 'hidden' : ''}`}>
+      <FaShoppingCart className='CartImg' />
+      {totalQuantity}
+    </Link>
   )
 }
 
