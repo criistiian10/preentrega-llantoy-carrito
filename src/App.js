@@ -13,14 +13,14 @@ function App() {
     <div className='App'>
       <BrowserRouter>
         <CartProvider>
-          <NavBar/>
+          <NavBar />
           <Routes>
-            <Route path='/' element={<ItemListContainer/>}/>
-            <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
-            <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
-            <Route path='/cart' element={<Cart />}/>
-            <Route path='*' element={<h1>404 NOT FOUND</h1>}/>
-            <Route path='/checkout' element={<Checkout/>}/>
+            <Route path='/' element={<ItemListContainer greeting={"Centro Comercial 🎮"} />} />
+            <Route path='/categoria/:categoriaId' element={<ItemListContainer />} />
+            <Route path='/item/:itemId' element={<ItemDetailContainer />} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/checkout' element={<Checkout />} />
+            <Route path='*' element={<h1>404 NOT FOUND</h1>} />
           </Routes>
         </CartProvider>
       </BrowserRouter>

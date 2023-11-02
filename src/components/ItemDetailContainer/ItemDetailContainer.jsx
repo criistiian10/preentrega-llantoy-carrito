@@ -1,40 +1,40 @@
-import './ItemDetailContainer.css'
-import { useEffect, useState } from 'react'
-import { getProductById } from '../../asyncMock'
+import './ItemDetailContainer.css';
+import {useState, useEffect} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
-import { useParams } from 'react-router-dom'
-import { collection, doc, getDoc } from 'firebase/firestore'
+import { useParams } from 'react-router-dom';
+import { getDoc, doc } from 'firebase/firestore';
 import { db } from '../../firebase-config'
 
 const ItemDetailContainer = () => {
-  const [product, setProduct] = useState(null)
+    const [product, setProduct] = useState(null)
+    const [loading, setLoading] = useState(true)
 
+    const { itemId } = useParams()
 
-  const { itemId } = useParams()
+    useEffect(() => {
+        setLoading(true)
 
-  useEffect(() => {
-      
+        const docRef = doc(db, 'juegos', itemId)
 
-      const docRef = doc(db, 'juegos', itemId)
+        getDoc(docRef)
+            .then(response => {
+                const data = response.data()
+                const productsAdapted = {id: response.id, ...data}
+                setProduct(productsAdapted)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+            .finally(() => {
+                setLoading(false)
+            })
+    }, [itemId])
 
-      getDoc(docRef)
-          .then(response => {
-              const data = response.data()
-              const productsAdapted = {id: response.id, ...data}
-              setProduct(productsAdapted)
-          })
-          .catch(error => {
-              console.log(error)
-          })
-          
-  }, [itemId])
-
-    return (
-      <div className='ItemDetailContainer'>
-        
-        <ItemDetail {...product} />
-      </div>
+    return(
+        <div className='detail-container'>
+            {loading ? <p>cargando...</p> : <ItemDetail {...product} />}
+        </div>
     )
 }
 
-export default ItemDetailContainer
+export default ItemDetailContainer;
